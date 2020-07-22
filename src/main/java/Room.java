@@ -19,4 +19,12 @@ public class Room {
     public int getCapacity() {
         return this.capacity;
     }
+
+    public void addGuest(Guest guest) {
+        guests.add(guest);
+    }
+
+    public int numberOfGuests() {
+        return guests.size();
+    }
 }
