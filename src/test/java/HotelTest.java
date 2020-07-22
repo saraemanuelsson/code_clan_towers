@@ -9,6 +9,7 @@ public class HotelTest {
     private Hotel hotel;
     private Room room1;
     private Room room2;
+    private Guest guest1;
 
     @Before
     public void before(){
@@ -18,6 +19,7 @@ public class HotelTest {
         room2 = new ConferenceRoom("Conference Room 1", 1);
         hotel.addRoom(room1);
         hotel.addRoom(room2);
+        guest1 = new Guest("Harrison");
     }
 
     @Test
@@ -29,8 +31,9 @@ public class HotelTest {
 
     @Test
     public void canCheckInGuest(){
-        hotel.checkGuestIn()
-//    }
+        hotel.checkGuestIn("1", guest1);
+        assertEquals(1, room1.numberOfGuests());
+    }
 
     @Test
     public void findByName(){
