@@ -34,4 +34,10 @@ public class Hotel {
         Room room = findRoomByName(roomName);
         room.removeGuests();
     }
+
+    public Booking bookRoom(Room room, int nights) {
+        Booking booking = new Booking(room, nights);
+        room.setBooked(true);
+        return booking;
+    }
 }

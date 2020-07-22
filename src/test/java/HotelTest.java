@@ -48,4 +48,10 @@ public class HotelTest {
         hotel.checkOutGuests("1");
         assertEquals(0, room1.numberOfGuests());
     }
+
+    @Test
+    public void canBookRoom(){
+        hotel.bookRoom(room1, 5);
+        assertEquals(true, room1.isBooked());
+    }
 }

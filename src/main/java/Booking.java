@@ -1,14 +1,14 @@
 public class Booking {
-    private Bedroom bedroom;
+    private Room room;
     private int nightsBooked;
 
-    public Booking(Bedroom bedroom, int nightsBooked) {
-        this.bedroom = bedroom;
+    public Booking(Room room, int nightsBooked) {
+        this.room = room;
         this.nightsBooked = nightsBooked;
     }
 
-    public Bedroom getRoom() {
-        return this.bedroom;
+    public Room getRoom() {
+        return this.room;
     }
 
     public int getNightsBooked(){
