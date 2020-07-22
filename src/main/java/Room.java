@@ -5,12 +5,14 @@ public class Room {
     private int capacity;
     private ArrayList<Guest> guests;
     private boolean booked;
+    private int rate;
 
-    public Room(String name, int capacity){
+    public Room(String name, int capacity, int rate){
         this.name = name;
         this.capacity = capacity;
         this.guests = new ArrayList<Guest>();
         this.booked = false;
+        this.rate = rate;
     }
 
     public String getName() {
@@ -39,5 +41,9 @@ public class Room {
 
     public void setBooked(boolean booked) {
         this.booked = booked;
+    }
+
+    public int getRate(){
+        return this.rate;
     }
 }

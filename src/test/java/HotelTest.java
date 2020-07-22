@@ -15,8 +15,8 @@ public class HotelTest {
     public void before(){
         emptyHotel = new Hotel();
         hotel = new Hotel();
-        room1 = new Bedroom("1", 2, 'D');
-        room2 = new ConferenceRoom("Conference Room 1", 1);
+        room1 = new Bedroom("1", 2, 50, 'D');
+        room2 = new ConferenceRoom("Conference Room 1", 1, 300);
         hotel.addRoom(room1);
         hotel.addRoom(room2);
         guest1 = new Guest("Harrison");

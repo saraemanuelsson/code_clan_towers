@@ -9,7 +9,7 @@ public class RoomTest {
 
     @Before
     public void setup() {
-        room1 = new Room("1", 2);
+        room1 = new Room("1", 2, 50);
         guest1 = new Guest("Harrison");
         guest2 = new Guest("John");
     }
@@ -35,8 +35,13 @@ public class RoomTest {
     }
 
     @Test
-       public void canSetBook(){
+    public void canSetBook(){
         room1.setBooked(true);
         assertEquals(true, room1.isBooked());
+    }
+
+    @Test
+    public void canGetRate(){
+        assertEquals(50, room1.getRate());
     }
 }

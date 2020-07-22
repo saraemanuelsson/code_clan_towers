@@ -14,4 +14,6 @@ public class Booking {
     public int getNightsBooked(){
         return this.nightsBooked;
     }
+
+    public int
 }
