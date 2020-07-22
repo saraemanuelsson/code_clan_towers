@@ -15,5 +15,7 @@ public class Booking {
         return this.nightsBooked;
     }
 
-    public int
+    public int getTotalBill() {
+        return room.getRate() * nightsBooked;
+    }
 }

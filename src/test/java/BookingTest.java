@@ -19,4 +19,9 @@ public class BookingTest {
         assertEquals(room1, booking.getRoom());
         assertEquals(4, booking.getNightsBooked());
     }
+
+    @Test
+    public void testBookingTotalBill() {
+        assertEquals(200, booking.getTotalBill());
+    }
 }
