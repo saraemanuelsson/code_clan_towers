@@ -1,15 +1,16 @@
 import java.util.ArrayList;
 
 public class Room {
-
     private String name;
     private int capacity;
     private ArrayList<Guest> guests;
+    private boolean booked;
 
     public Room(String name, int capacity){
         this.name = name;
         this.capacity = capacity;
         this.guests = new ArrayList<Guest>();
+        this.booked = false;
     }
 
     public String getName() {
@@ -30,5 +31,13 @@ public class Room {
 
     public void removeGuests(){
         this.guests.clear();
+    }
+
+    public boolean isBooked() {
+        return this.booked;
+    }
+
+    public void setBooked(boolean booked) {
+        this.booked = booked;
     }
 }

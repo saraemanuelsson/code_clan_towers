@@ -33,4 +33,10 @@ public class RoomTest {
         room1.removeGuests();
         assertEquals(0, room1.numberOfGuests());
     }
+
+    @Test
+       public void canSetBook(){
+        room1.setBooked(true);
+        assertEquals(true, room1.isBooked());
+    }
 }
