@@ -30,7 +30,9 @@ public class Hotel {
 
     public void checkGuestIn(String roomName, Guest guest) {
         Room room = findRoomByName(roomName);
-        room.addGuest(guest);
+        if (!room.isBooked()) {
+            room.addGuest(guest);
+        }
     }
 
     public void checkOutGuests(String roomName){
