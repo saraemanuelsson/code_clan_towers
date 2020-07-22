@@ -55,4 +55,14 @@ public class Hotel {
     public int getNumberOfDiningRooms(){
         return this.diningRooms.size();
     }
+
+    public ArrayList<Bedroom> vacantBedrooms() {
+        ArrayList<Bedroom> bedrooms = new ArrayList<Bedroom>();
+        for (Room room : this.rooms) {
+            if (room instanceof Bedroom && !room.isBooked()) {
+                bedrooms.add((Bedroom)room);
+            }
+        }
+        return bedrooms;
+    }
 }
