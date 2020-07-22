@@ -29,4 +29,9 @@ public class Hotel {
         Room room = findRoomByName(roomName);
         room.addGuest(guest);
     }
+
+    public void checkOutGuests(String roomName){
+        Room room = findRoomByName(roomName);
+        room.removeGuests();
+    }
 }
