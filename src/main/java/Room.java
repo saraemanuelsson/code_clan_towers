@@ -27,4 +27,8 @@ public class Room {
     public int numberOfGuests() {
         return guests.size();
     }
+
+    public void removeGuests(){
+        this.guests.clear();
+    }
 }
