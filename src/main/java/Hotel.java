@@ -15,4 +15,18 @@ public class Hotel {
     public int numberOfRooms() {
         return this.rooms.size();
     }
+
+    public Room findRoomByName(String roomName) {
+        for (Room room : this.rooms){
+            if (room.getName() == roomName){
+                return room;
+            }
+        }
+        return null;
+    }
+
+    public void checkGuestIn(String roomName, Guest guest) {
+        Room room = findRoomByName(roomName);
+        room.addGuest(guest);
+    }
 }
